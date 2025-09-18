@@ -1,0 +1,31 @@
+export CUDA_VISIBLE_DEVICES=0,1,2,3
+
+python -u run.py \
+  --is_training 1 \
+  --root_path ./datasets/ \
+  --data_path data_xianCO_with_time.csv \
+  --adj_path Adj_Mat.csv \
+  --model_id GWTSD_12_6 \
+  --model GWTSD \
+  --data custom \
+  --features M \
+  --seq_len 12 \
+  --pred_len 6 \
+  --seg_len 6 \
+  --label_len 6 \
+  --dynamic_dim 256 \
+  --hidden_dim 512 \
+  --hidden_layers 3 \
+  --num_blocks 4 \
+  --enc_in 1298 \
+  --dec_in 1298 \
+  --c_out 1298 \
+  --des 'Exp' \
+  --learning_rate 0.001 \
+  --itr 1 \
+  --gpu 0 \
+  --select_filter 1 \
+  --hidden_num 256 \
+  --diff_hidden_channels 16\
+  --diff_dropout 0.04 \
+  --diff_num_heads 1 | tee GWTSD.txt
