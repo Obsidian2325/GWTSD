@@ -5,21 +5,21 @@ python -u run.py \
   --root_path ./datasets/ \
   --data_path data_xianCO_with_time.csv \
   --adj_path Adj_Mat.csv \
-  --model_id GWTSD_12_6 \
+  --model_id GWTSD_96_48 \
   --model GWTSD \
   --data custom \
   --features M \
-  --seq_len 12 \
-  --pred_len 6 \
-  --seg_len 6 \
-  --label_len 6 \
+  --seq_len 96 \
+  --pred_len 48 \
+  --seg_len 48 \
+  --label_len 48 \
   --dynamic_dim 256 \
   --hidden_dim 512 \
   --hidden_layers 3 \
   --num_blocks 4 \
-  --enc_in 1298 \
-  --dec_in 1298 \
-  --c_out 1298 \
+  --enc_in 128 \
+  --dec_in 128 \
+  --c_out 128 \
   --des 'Exp' \
   --learning_rate 0.001 \
   --itr 1 \
@@ -28,4 +28,4 @@ python -u run.py \
   --hidden_num 256 \
   --diff_hidden_channels 16\
   --diff_dropout 0.04 \
-  --diff_num_heads 1 | tee GWTSD.txt
+  --diff_num_heads 1 | tee GWTSD_96.txt

@@ -17,3 +17,24 @@ bash install_geometric.sh
 ```
 bash ./scripts/XIAN/GWTSD.sh
 ```
+
+# Supplementary Experiments
+Due to the page limit of the main text and the response length, we provide further experimental results here to address concerns regarding the rigor of our experiments.
+## Model Efficiency Study
+<p align="center">
+  <img src="./pictures/Bubbles1_labeled.png" width="500"><br>
+  <em>Fig1. Model Efficiency Study</em>
+</p>
+
+We evaluate model efficiency through three dimensions including prediction performance, GPU memory usage and training speed as shown in Fig. 1. Horizontal axis represents the maximum GPU memory usage while training, and vertical axis represents the prediction accuracy measured by MSE. Bubbles represent the time consumed for each iteration, larger and darker bubbles represents more consumed time.
+
+As shown in Fig. 1, under the setting with a prediction horizon of 96, GWTSD achieves the best forecasting performance. Compared with STG-Mamba, which ranks second in terms of forecasting efficiency, GWTSD improves the prediction accuracy by 6.12%, while consuming only 23.66% of the GPU memory used by STG-Mamba. Moreover, STG-Mamba requires three orders of magnitude more training time per iteration than GWTSD.
+
+In fact, compared with other spatiotemporal forecasting methods, including STAEformer, STG-Mamba, and PDG2Seq, GWTSD exhibits remarkable advantages in both GPU memory consumption and training speed. Compared with the decomposition-based method FEDformer, GWTSD achieves a 17.72% improvement in forecasting efficiency under comparable computational resource consumption. Compared with TimeMixer, which achieves the best forecasting efficiency among multi-scale methods, GWTSD improves the forecasting accuracy by 8.27%, while using only 25.94% of the GPU memory required by TimeMixer.
+
+ In general, we can observe that GWTSD demonstrates advanced overall performance in balancing prediction accuracy and computational resource consumption.
+
+
+## Hyperparameter Sensitivity Analysis
+
+TO BE CONTINUED

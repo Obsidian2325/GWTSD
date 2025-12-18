@@ -525,6 +525,7 @@ class Model(nn.Module):
             self.disentanglement = FourierFilter(self.mask_spectrum)
         elif self.select_filter == 1:
             self.disentanglement = WaveletFilter(wavelet=self.wavelet, level=self.wavelet_level, seq_len=self.input_len)
+        self.register_buffer("adj", adj)
         #DIFFormer
         self.difformer = DIFFormer(in_channels=self.input_len, hidden_channels=self.diff_hidden_channels, out_channels=self.input_len, num_layers=2, num_heads=self.diff_num_heads, kernel='simple', alpha=0.5, dropout=self.diff_dropout, use_bn=True, use_residual=True, use_weight=True, use_graph=False)
 
@@ -571,7 +572,6 @@ class Model(nn.Module):
         for i in range(self.num_blocks):
             #Filter
             time_var_input, time_inv_input = self.disentanglement(residual)
-
             #DIFFormer
             time_inv_input = self.difformer(time_inv_input, self.adj)
             time_var_input = self.difformer(time_var_input, self.adj)
