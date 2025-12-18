@@ -22,7 +22,7 @@ bash ./scripts/XIAN/GWTSD.sh
 Due to the page limit of the main text and the response length, we provide further experimental results here to address concerns regarding the rigor of our experiments.
 ## Model Efficiency Study
 <p align="center">
-  <img src="./pictures/Bubbles1_labeled.png" width="500"><br>
+  <img src="./pictures/Bubbles1_labeled.png" width="800"><br>
   <em>Fig1. Model Efficiency Study</em>
 </p>
 
@@ -38,7 +38,7 @@ In fact, compared with other spatiotemporal forecasting methods, including STAEf
 ## Hyperparameter Sensitivity Analysis
 ### Wavelet Decomposition Depth
 <p align="center">
-  <img src="./pictures/DecompositionDepth_ALL_2.png" width="500"><br>
+  <img src="./pictures/DecompositionDepth_ALL_2.png" width="800"><br>
   <em>Fig2. Comparison Study in Wavelet Decomposition Depth </em>
 </p>
 We conduct experiments to investigate the impact of different wavelet decomposition depths on the performance of GWTSD. As shown in Fig. 2, we vary the decomposition depth from 2 to 5 and evaluate the model's forecasting accuracy on the dataset with a prediction horizon of 96. 
@@ -46,7 +46,7 @@ The relative variations of MSE and MAE are 1.95% and 1.69%, respectively, indica
 
 ### Koopman Embedding Dimension
 <p align="center">
-  <img src="./pictures/KoopmanEmbeddingDimension_ALL.png" width="500"><br>
+  <img src="./pictures/KoopmanEmbeddingDimension_ALL.png" width="800"><br>
   <em>Fig3. Comparison Study in Koopman Embedding Dimension </em>
 </p>
 We also conduct experiments on the impact of different Koompan embedding dimension on GWTSD. As shown in Fig. 3, we vary the decomposition depth from 2 to 5 and evaluate the model's forecasting accuracy on the dataset with a prediction horizon of 96. 
