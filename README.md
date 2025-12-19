@@ -23,7 +23,7 @@ Due to the page limit of the main text and the response length, we provide furth
 ## Model Efficiency Study
 <p align="center">
   <img src="./pictures/Bubbles1_labeled.png" width="800"><br>
-  <em>Fig1. Model Efficiency Study</em>
+  <em>Fig1. Model Efficiency Study.</em>
 </p>
 
 We evaluate model efficiency through three dimensions including prediction performance, GPU memory usage and training speed as shown in Fig. 1. Horizontal axis represents the maximum GPU memory usage while training, and vertical axis represents the prediction accuracy measured by MSE. Bubbles represent the time consumed for each iteration, larger and darker bubbles represents more consumed time.
@@ -39,7 +39,7 @@ In fact, compared with other spatiotemporal forecasting methods, including STAEf
 ### Wavelet Decomposition Depth
 <p align="center">
   <img src="./pictures/DecompositionDepth_ALL_2.png" width="800"><br>
-  <em>Fig2. Comparison Study in Wavelet Decomposition Depth </em>
+  <em>Fig2. Comparison Study in Wavelet Decomposition Depth. </em>
 </p>
 We conduct experiments to investigate the impact of different wavelet decomposition depths on the performance of GWTSD. As shown in Fig. 2, we vary the decomposition depth from 2 to 5 and evaluate the model's forecasting accuracy on the dataset with a prediction horizon of 96. 
 The relative variations of MSE and MAE are 1.95% and 1.69%, respectively, indicating low sensitivity to wavelet decomposition depth.
@@ -47,7 +47,7 @@ The relative variations of MSE and MAE are 1.95% and 1.69%, respectively, indica
 ### Koopman Embedding Dimension
 <p align="center">
   <img src="./pictures/KoopmanEmbeddingDimension_ALL.png" width="800"><br>
-  <em>Fig3. Comparison Study in Koopman Embedding Dimension </em>
+  <em>Fig3. Comparison Study in Koopman Embedding Dimension. </em>
 </p>
 We also conduct experiments on the impact of different Koompan embedding dimension on GWTSD. As shown in Fig. 3, we vary the decomposition depth from 128 to 384 and evaluate the model's forecasting accuracy on the dataset with a prediction horizon of 96. 
 The relative variations of MSE and MAE are 0.51% and 1.48%, respectively, indicating low sensitivity to wavelet decomposition depth.
