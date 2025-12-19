@@ -46,7 +46,7 @@ The relative variations of MSE and MAE are 1.95% and 1.69%, respectively, indica
 
 ### Koopman Embedding Dimension
 <p align="center">
-  <img src="./pictures/KoopmanEmbeddingDimension_ALL.png" width="800"><br>
+  <img src="./pictures/KoopmanEmbeddingDimension_ALL_2.png" width="800"><br>
   <em>Fig3. Comparison Study in Koopman Embedding Dimension. </em>
 </p>
 We also conduct experiments on the impact of different Koompan embedding dimension on GWTSD. As shown in Fig. 3, we vary the decomposition depth from 128 to 384 and evaluate the model's forecasting accuracy on the dataset with a prediction horizon of 96. 
